@@ -1,24 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
+import Lineup from './components/Lineup';
 import './App.css';
 
 function App() {
+  const lineups = [...Array(7).keys()].map(i => {
+    return <Lineup num={i+1} />;
+  });
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {lineups}
     </div>
   );
 }
