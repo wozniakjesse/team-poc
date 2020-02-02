@@ -1,10 +1,18 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 const Player = (props) => {
   return (
-    <Button>{props.title}</Button>
-  )
+    <TableRow>
+      <TableCell>
+        {props.position}:
+      </TableCell>
+      <TableCell>
+      {props.name}
+      </TableCell>
+    </TableRow>
+  );
 }
 
 export default Player;
