@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Lineup from './components/Lineup';
-import ManualLineup from './components/ManualLineup';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow, TableSortLabel } from '@material-ui/core';
 import './App.css';
 
 function App() {
@@ -25,8 +20,7 @@ function App() {
   }, []);
   
   return (
-  	<div>
-    <ManualLineup></ManualLineup>
+    <div className="App">
       <Container maxWidth="xs">
         {lineups}
       </Container>
